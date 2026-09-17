@@ -23,6 +23,11 @@ type: Bug
 2. Click on ...
 3. Observe ...
 
+### Environment / System Details
+<!-- Provide runtime details so the agent can reproduce locally if needed -->
+- **OS:** [e.g., macOS / Windows / Linux]
+- **Browser:** [e.g., Chrome / Safari / Firefox]
+  
 ### Target Component / File (Optional)
 <!-- Hint or file path if known (e.g., src/components/Cart.tsx) -->
 
