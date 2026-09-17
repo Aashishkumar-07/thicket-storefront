@@ -1,0 +1,121 @@
+/* ---------- Design tokens ---------- */
+:root {
+  --bg: #F0F2EA;
+  --surface: #FFFFFF;
+  --surface-sunken: #E6E9DD;
+  --ink: #22301F;
+  --ink-soft: #55604E;
+  --pine: #2F5233;
+  --pine-dark: #223D26;
+  --ochre: #C98A2C;
+  --clay: #A85C3D;
+  --border: #D6D9C9;
+  --danger: #B3432B;
+
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --radius-card: 22px;
+  --radius-control: 8px;
+  --radius-pill: 999px;
+
+  --shadow-drawer: -12px 0 40px rgba(34, 48, 34, 0.18);
+  --shadow-modal: 0 24px 60px rgba(34, 48, 34, 0.28);
+}
+
+[data-theme='dark'] {
+  --bg: #16201A;
+  --surface: #1F2C21;
+  --surface-sunken: #17221A;
+  --ink: #E7E9DE;
+  --ink-soft: #AEB6A1;
+  --pine: #6FA574;
+  --pine-dark: #4C7C52;
+  --border: #33422F;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  color: var(--ink);
+  margin: 0;
+  font-weight: 500;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+.btn-primary {
+  background: var(--pine);
+  color: #F4F6EE;
+  border: none;
+  border-radius: var(--radius-control);
+  padding: 13px 22px;
+  font-size: 15px;
+  font-weight: 500;
+  transition: background 0.15s ease;
+}
+
+.btn-primary:hover {
+  background: var(--pine-dark);
+}
+
+.btn-primary:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--ink);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-control);
+  padding: 12px 20px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+:focus-visible {
+  outline: 2px solid var(--pine);
+  outline-offset: 2px;
+}
