@@ -5,7 +5,6 @@ on:
     types: [opened]
 
 permissions:
-  issues: write
   contents: read
 
 jobs:
@@ -36,6 +35,7 @@ jobs:
         env:
           ISSUE_TYPE: ${{ steps.issue-type.outputs.type }}
         with:
+          github-token: ${{ secrets.CODEX_ISSUE_DISPATCHER }}
           script: |
             const type = process.env.ISSUE_TYPE;
 
@@ -49,22 +49,5 @@ jobs:
 
             Issue type: ${type}
 
-            Read and follow the repository's AGENTS.md instructions.
-
-            Read the issue title and description carefully, then autonomously
-            inspect the repository to understand the relevant implementation.
-
-            Implement the requested change with the smallest appropriate modification.
-
-            Run the relevant tests, linting, and type checking defined by the repository.
-
-            When finished, create a pull request against the default branch.
-
-            Include:
-
-            Closes #${context.issue.number}
-
-            in the pull request description.
-
-            Do not merge the pull request.`
+            Read and follow the repository's AGENTS.md instructions.`
             });
