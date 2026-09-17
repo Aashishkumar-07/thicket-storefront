@@ -46,7 +46,6 @@ jobs:
               body: `@codex
 
             Please work on this GitHub issue.
-
             Issue type: ${type}
 
             Read and follow the repository's AGENTS.md instructions.`

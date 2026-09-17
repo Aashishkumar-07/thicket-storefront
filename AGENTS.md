@@ -38,13 +38,56 @@ There is no test suite or lint script at the moment. For every change, run `npm 
 - Do not rewrite broad styling systems while fixing a targeted issue.
 - Keep public-facing text concise and consistent with the warm storefront tone already in the app.
 
-## Pull Requests
+## GitHub Issue Workflow
 
-When changes originate from a GitHub issue:
+### 1. Understand and Implement
 
-- Create a dedicated branch.
-- Do not merge the pull request.
-- Include the issue number in the PR description.
-- Include `Closes #<issue-number>`.
-- Explain what changed.
-- Explain how the change was validated.
+- Read the GitHub issue carefully.
+- Inspect the relevant parts of the repository before making changes.
+- Implement the smallest appropriate change.
+- Avoid unrelated refactoring.
+
+### 2. Validate
+
+- Run the relevant repository validation before publishing.
+- For UI changes, also perform browser verification when the existing environment/tooling supports it.
+- Attach a demo or screenshot if possible.
+- If a validation step cannot be performed because of an environment limitation:
+  - Do not install unrelated dependencies solely to perform the check.
+  - Continue with the draft PR if the implementation is otherwise complete.
+  - Clearly document the unperformed validation and its reason in the draft PR description.
+
+### 3. Create a Dedicated Branch
+
+- Use a descriptive branch name related to the issue.
+
+### 4. Commit the Change
+
+### 5. Verify GitHub Remote
+
+- Ensure the GitHub remote is available before publishing.
+- Restore it if necessary:
+  `https://github.com/Aashishkumar-07/thicket-storefront.git`
+
+### 6. Push the Branch
+
+### 7. Create the Draft Pull Request
+
+- Target the repository's default branch.
+- The draft PR description must include:
+  - A concise summary of what changed.
+  - How the change was validated.
+  - Any validation that could not be performed and why.
+  - `Closes #<issue-number>`
+- Do not wait for the user to separately ask for the draft pull request to be created.
+
+### 8. Pull Request Safety
+
+- Never merge the draft pull request.
+- Never push directly to the default branch.
+- Do not modify unrelated files.
+
+## Definition of Done for GitHub Issues
+
+- A GitHub issue task is considered complete only after the branch is pushed and the draft pull request is successfully created.
+- If pushing the branch or creating the draft PR fails, report the exact failure instead of claiming the task is complete.
