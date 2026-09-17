@@ -12,10 +12,6 @@ export default function ProductCard({ product, onOpen, onAdd }) {
         onClick={() => onOpen(product)}
         aria-label={`View ${product.name}`}
       >
-        {/* BUG (product-image-aspect-ratio): this tile is a fixed pixel
-            height instead of a fixed aspect-ratio, so at narrow (mobile,
-            one-column) card widths it renders as a short, stretched-looking
-            strip instead of a proportionate square. */}
         <Icon size={40} color="#F4F6EE" strokeWidth={1.5} />
         {product.badge && <span className="product-card__badge">{product.badge}</span>}
       </button>

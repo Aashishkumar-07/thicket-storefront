@@ -12,10 +12,6 @@ export default function CheckoutForm({ onBack }) {
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }))
   }
 
-  // BUG (checkout-no-validation): this submits successfully no matter what
-  // is in the form. Required fields have no `required` attribute, there's
-  // no check for empty/invalid values before setPlaced(true), and no error
-  // messaging is ever shown to the shopper.
   function handleSubmit(e) {
     e.preventDefault()
     setPlaced(true)

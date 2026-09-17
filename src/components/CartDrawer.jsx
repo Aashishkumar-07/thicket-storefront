@@ -22,14 +22,6 @@ export default function CartDrawer({ onCheckout }) {
           </button>
         </div>
 
-        {/*
-          BUG (cart-drawer-overflow): this list has no overflow-y or
-          min-height: 0, and the drawer's parent isn't set up as a
-          height-constrained flex column, so once there are more items than
-          fit on screen the list just keeps growing — pushing the subtotal
-          and checkout button down past the bottom of the viewport with no
-          way to scroll down to reach them.
-        */}
         <div className="cart-drawer__items">
           {items.length === 0 && <p className="cart-drawer__empty">Your cart is empty.</p>}
           {items.map((item) => (

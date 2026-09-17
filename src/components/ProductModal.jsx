@@ -9,14 +9,6 @@ export default function ProductModal({ product, onClose, onAdd }) {
 
   return (
     <div className="modal-overlay" onClick={onClose}>
-      {/*
-        BUG (product-modal-mobile-overflow): the modal panel is centered
-        with position: fixed + top: 50% / left: 50% / translate(-50%, -50%)
-        and has no max-height or overflow-y set. On short mobile viewports,
-        taller product descriptions push the panel's top (including the
-        close button) above y=0, off the visible screen, with no way to
-        scroll up to reach it.
-      */}
       <div
         className="modal-panel"
         onClick={(e) => e.stopPropagation()}

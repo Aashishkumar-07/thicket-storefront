@@ -222,9 +222,6 @@
 
 .product-card__image {
   width: 100%;
-  /* BUG (product-image-aspect-ratio): fixed height instead of aspect-ratio.
-     Looks fine in a 3-column grid but distorts into a short, wide strip
-     once the card is nearly full viewport width on mobile. */
   height: 190px;
   border: none;
   display: flex;
@@ -270,9 +267,6 @@
 .product-card__price {
   font-size: 15px;
   font-weight: 500;
-  /* BUG (price-dark-mode-contrast): hardcoded muted color instead of a
-     theme token. Reads fine on the light surface but is nearly invisible
-     against the dark-mode surface color. */
   color: #9aa08c;
 }
 
@@ -312,9 +306,6 @@
   width: min(560px, 92vw);
   border-radius: var(--radius-card);
   box-shadow: var(--shadow-modal);
-  /* BUG (product-modal-mobile-overflow): see ProductModal.jsx — no
-     max-height / overflow-y here, so tall content can push this panel's
-     top above the viewport on short mobile screens. */
   position: relative;
 }
 
@@ -411,9 +402,6 @@
   color: var(--ink);
 }
 
-/* BUG (cart-drawer-overflow): no overflow-y / min-height: 0 here, so with
-   several items this block just keeps growing inside the fixed-height
-   drawer, shoving the subtotal + checkout button below the viewport. */
 .cart-drawer__items {
   display: flex;
   flex-direction: column;
