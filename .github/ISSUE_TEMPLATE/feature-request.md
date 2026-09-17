@@ -25,7 +25,7 @@ type: Feature
 ### Target Component / File (Optional)
 <!-- Hint where changes should be implemented (e.g., src/components/Checkout.tsx or src/api/cart.ts) -->
 
-Design / Screenshots (Optional)
+### Design / Screenshots (Optional)
 <!-- Add mockups, screenshots, references, or image URLs if available -->
 
 ### Additional Context (Optional)
