@@ -57,7 +57,7 @@ export default function Navbar({ theme, onToggleTheme }) {
       {mobileOpen && (
         <nav className="navbar__mobile" aria-label="Mobile">
           {NAV_LINKS.map((link) => (
-            <a key={link} href="#shop">
+            <a key={link} href="#shop" onClick={() => setMobileOpen(false)}>
               {link}
             </a>
           ))}
